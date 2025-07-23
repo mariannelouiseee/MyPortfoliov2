@@ -7,7 +7,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px;
+  scroll-padding-top: 100px;
 }
 .container {
   background: linear-gradient(to right, #e0f7ff, #b4d9f3);
@@ -200,6 +200,7 @@ ul li a:hover {
   color: #0077cc;
   margin-bottom: 15px;
   text-align: center;
+  letter-spacing: 2px;
 }
 
 .about_info p {
@@ -221,7 +222,7 @@ ul li a:hover {
   margin-bottom: 60px;
   text-align: center;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 .timeline-items {
@@ -333,6 +334,106 @@ ul li a:hover {
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   padding: 5px;
+}
+
+.myskills h1 {
+  font-size: 2.8rem;
+  letter-spacing: 2px;
+  color: #0077cc;
+  text-align: center;
+}
+
+.myskills h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 15px;
+}
+
+.myskills img {
+  width: 70px;
+  height: 70px;
+}
+
+.skills-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.skills-item .skill {
+  background-color: white;
+  padding: 1%;
+  border-radius: 15px;
+  border: 1px solid rgb(63, 182, 230);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.skills-item .skill:hover {
+  transform: scale(1.1);
+}
+
+#contact {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  max-width: 600px;
+  width: 100%;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.form h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #005fa3;
+  font-size: 2rem;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #cdd9e3;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border 0.3s ease;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border-color: #005fa3;
+  outline: none;
+}
+
+.form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form button {
+  width: 100%;
+  padding: 15px;
+  background: #005fa3;
+  color: #ffffff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form button:hover {
+  background: #00457c;
 }
 
 .footer {
