@@ -177,14 +177,7 @@ ul li a:hover {
 
 #about {
   scroll-margin-top: 70px;
-  opacity: 0;
-  transition: opacity 1s ease-out;
 }
-
-#about.animate {
-  opacity: 1;
-}
-
 .about_page {
   display: flex;
   flex-direction: column;
@@ -192,8 +185,15 @@ ul li a:hover {
   min-height: 80vh;
   color: #fff;
   padding: 0 8% 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
+.about_page.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
 .details {
   display: flex;
   background-color: white;
@@ -662,6 +662,10 @@ ul li a:hover {
   }
   .about_info h1 {
     font-size: 2.5rem;
+  }
+
+  #education-timeline h1 {
+    font-size: 2.3rem;
   }
 
   .about_info p {

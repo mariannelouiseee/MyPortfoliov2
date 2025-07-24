@@ -255,7 +255,7 @@
 
     <script>
       const elements = document.querySelectorAll(
-        ".info, .buttons, .image .mypic, #about, .timeline-item, .skill, .form"
+        ".info, .buttons, .image .mypic, .about_page, .timeline-item, .skill, .form"
       );
 
       const observer = new IntersectionObserver(
@@ -274,10 +274,9 @@
       );
 
       elements.forEach((el, index) => {
-        // Add directional class for timeline items
         if (el.classList.contains("timeline-item")) {
           if (index % 2 === 0) {
-            el.classList.add("right-in"); // default
+            el.classList.add("right-in");
           } else {
             el.classList.add("left-in");
           }
