@@ -463,7 +463,7 @@ ul li a:hover {
   max-width: 600px;
   width: 100%;
   background: #ffffff;
-  padding: 40px;
+  padding: 30px;
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
@@ -479,9 +479,17 @@ ul li a:hover {
 
 .form h1 {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   color: #005fa3;
   font-size: 2rem;
+}
+
+.form p {
+  color: #b0c4de;
+  text-transform: uppercase;
+  font-size: 15px;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .form input,
@@ -551,7 +559,7 @@ ul li a:hover {
     padding: 5px 5px;
   }
   #home {
-    min-height: 85vh;
+    min-height: 90vh;
   }
 
   .logo {
@@ -661,11 +669,11 @@ ul li a:hover {
     max-width: 200px;
   }
   .about_info h1 {
-    font-size: 2.5rem;
+    font-size: 9.5vw;
   }
 
   #education-timeline h1 {
-    font-size: 2.3rem;
+    font-size: 9.5vw;
   }
 
   .about_info p {
@@ -673,6 +681,10 @@ ul li a:hover {
   }
   .form {
     margin-top: 20px;
+    padding: 20px;
+  }
+  .form p {
+    font-size: 10px;
   }
 }
 
