@@ -26,10 +26,10 @@
             <li><a href="#contact">CONTACTS</a></li>
           </ul>
         </div>
+        <div class="image">
+          <img src="img/mypic.JPG" class="mypic" />
+        </div>
         <div class="info">
-          <div class="image">
-            <img src="img/mypic.JPG" class="mypic" />
-          </div>
           <h3>Hello! I'm <span>M</span>arianne.</h3>
           <h1><span>W</span>EB <span>D</span>EVELOPER</h1>
           <h4>
@@ -252,5 +252,39 @@
         </div>
       </footer>
     </div>
+
+    <script>
+      const elements = document.querySelectorAll(
+        ".info, .buttons, .image .mypic, #about, .timeline-item, .skill, .form"
+      );
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animate");
+            } else {
+              entry.target.classList.remove("animate");
+            }
+          });
+        },
+        {
+          threshold: 0.3,
+        }
+      );
+
+      elements.forEach((el, index) => {
+        // Add directional class for timeline items
+        if (el.classList.contains("timeline-item")) {
+          if (index % 2 === 0) {
+            el.classList.add("right-in"); // default
+          } else {
+            el.classList.add("left-in");
+          }
+        }
+
+        observer.observe(el);
+      });
+    </script>
   </body>
 </html>
