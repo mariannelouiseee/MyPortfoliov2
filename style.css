@@ -501,7 +501,7 @@ ul li a:hover {
   border: 1px solid #cdd9e3;
   border-radius: 8px;
   font-size: 1rem;
-  font-family: inherit;
+
   transition: border 0.3s ease;
 }
 
@@ -563,15 +563,15 @@ ul li a:hover {
     padding: 0;
   }
   #home {
-    min-height: 90vh;
+    min-height: 80vh;
   }
 
   .logo {
     height: 80px;
     width: 80px;
   }
+
   .logo-container {
-    justify-content: center;
     margin: auto;
   }
 
@@ -635,9 +635,33 @@ ul li a:hover {
     position: relative;
     width: 50%;
     height: auto;
-    margin-top: 30%;
+    margin-top: 35%;
     bottom: 0;
   }
+  #about {
+    margin-top: 0;
+  }
+  .about_image img {
+    width: 80%;
+  }
+  .about_image img {
+    max-width: 200px;
+  }
+  .about_info h1 {
+    font-size: 9.5vw;
+  }
+  .about_info p {
+    font-size: 1rem;
+  }
+  #education-timeline {
+    padding: 30px 20px;
+    margin-top: 5%;
+  }
+
+  #education-timeline h1 {
+    font-size: 9.5vw;
+  }
+
   .timeline-items::before {
     left: 7px;
   }
@@ -659,32 +683,21 @@ ul li a:hover {
   .timeline-dot {
     left: 2%;
   }
-  .about_image img {
-    width: 80%;
+
+  .myskills {
+    margin-top: 5%;
   }
   .skills-item {
     gap: 15px;
+    margin: 0 5px;
   }
-  #education-timeline {
-    padding: 30px 20px;
-    margin-top: 30px;
-  }
-  .about_image img {
-    max-width: 200px;
-  }
-  .about_info h1 {
-    font-size: 9.5vw;
+  .myskills img {
+    width: 60px;
+    height: 60px;
   }
 
-  #education-timeline h1 {
-    font-size: 9.5vw;
-  }
-
-  .about_info p {
-    font-size: 1rem;
-  }
   .form {
-    margin-top: 20px;
+    margin-top: 5%;
     padding: 20px;
   }
   .form p {
@@ -700,6 +713,9 @@ ul li a:hover {
 
   .navbar ul li a {
     font-size: 0.7rem;
+  }
+  .navbar ul {
+    margin-right: 20px;
   }
 
   .logo {
@@ -771,5 +787,14 @@ ul li a:hover {
     height: auto;
     margin-top: 15%;
     bottom: 0;
+  }
+  #about {
+    margin-top: 5%;
+  }
+  #education-timeline {
+    margin-top: 5%;
+  }
+  .form {
+    margin-top: 5%;
   }
 }
