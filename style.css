@@ -145,6 +145,7 @@ ul li a:hover {
   box-shadow: 0 0px 10px rgb(63, 182, 230);
   transform: scale(1.1);
 }
+
 .image {
   position: absolute;
   right: 5%;
@@ -196,13 +197,13 @@ ul li a:hover {
 }
 .details {
   display: flex;
+  flex-wrap: wrap;
   background-color: white;
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   overflow: hidden;
   max-width: 1000px;
   width: 100%;
-  flex-wrap: wrap;
 }
 
 .about_image {
@@ -551,12 +552,15 @@ ul li a:hover {
 }
 
 @media (max-width: 767px) {
+  .navbar {
+    padding: 0;
+  }
   .navbar ul li a {
     display: none;
   }
 
   ul li {
-    padding: 5px 5px;
+    padding: 0;
   }
   #home {
     min-height: 90vh;
@@ -568,6 +572,7 @@ ul li a:hover {
   }
   .logo-container {
     justify-content: center;
+    margin: auto;
   }
 
   .logo-container h3 {
@@ -581,7 +586,6 @@ ul li a:hover {
   .info {
     padding-top: 0%;
     padding-left: 0%;
-    padding-top: 0%;
     text-align: center;
     justify-content: center;
   }
@@ -690,12 +694,12 @@ ul li a:hover {
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .navbar {
-    padding: 0 15px;
+    padding: 0 10px;
     justify-content: space-between;
   }
 
   .navbar ul li a {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
   }
 
   .logo {
@@ -709,5 +713,63 @@ ul li a:hover {
 
   .logo-container h3 span {
     font-size: 1.7rem;
+  }
+
+  .info {
+    padding-top: 0%;
+    padding-left: 0%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .info h1 {
+    font-size: 7vw;
+  }
+
+  .info h3 {
+    font-size: 3.5vw;
+    line-height: 35px;
+  }
+
+  .info h4 {
+    font-size: 2vw;
+    line-height: 30px;
+  }
+
+  .buttons {
+    justify-content: center;
+    margin-right: 0;
+    margin-left: 0;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 3%;
+  }
+
+  .buttons p {
+    font-size: 2.5vw;
+  }
+
+  .buttons a {
+    font-size: 3vw;
+    padding: 10px;
+    border-width: 2px;
+  }
+
+  .image {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    right: 0;
+  }
+
+  .image .mypic {
+    position: relative;
+    width: 35%;
+    height: auto;
+    margin-top: 15%;
+    bottom: 0;
   }
 }
