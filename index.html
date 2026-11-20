@@ -3,216 +3,669 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta
+      name="description"
+      content="Marianne Louise V. Medrano — QA Engineer and Web Developer. BSIT graduate of Isabela State University, Roxas Campus."
+    />
+    <meta name="theme-color" content="#4682b4" />
+    <title>Marianne Louise | QA Engineer &amp; Web Developer</title>
+    <link rel="icon" href="img/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <div id="home">
-        <div class="navbar">
-          <div class="logo-container">
-            <img src="img/logo.png" alt="" class="logo" />
-            <h3><span>M</span>arianne <span>L</span>ouise</h3>
-          </div>
-          <ul id="nav-links">
-            <li><a href="#home">HOME</a></li>
-            <li><a href="#about">ABOUT</a></li>
-            <li><a href="#education-timeline">EDUCATION</a></li>
-            <li><a href="#skills">SKILLS</a></li>
-            <li><a href="#contact">CONTACTS</a></li>
-          </ul>
-        </div>
-        <div class="image">
-          <img src="img/mypic.JPG" class="mypic" />
-        </div>
-        <div class="info">
-          <h3>Hello! I'm <span>M</span>arianne.</h3>
-          <h1><span>W</span>EB <span>D</span>EVELOPER</h1>
-          <h4>
-            <i
-              ><strong
-                >A fresh graduate from Isabela State University - Roxas</strong
-              ></i
-            >
-          </h4>
-        </div>
+    <!-- Decorative background -->
+    <div class="bg" aria-hidden="true">
+      <span class="blob blob-1"></span>
+      <span class="blob blob-2"></span>
+      <span class="blob blob-3"></span>
+      <span class="bg-grid"></span>
+    </div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
 
-        <div class="buttons">
-          <p>Contact Me ──</p>
-          <a href="https://www.facebook.com/share/1968xvtyRQ/"
-            ><i class="fa-brands fa-facebook"></i
-          ></a>
-          <a href="https://www.tiktok.com/@guiamedrano_?_t=ZS-8xmwvWttTRI&_r=1"
-            ><i class="fa-brands fa-instagram"></i
-          ></a>
-          <a href="https://www.instagram.com/guiamedrano_?igsh=ZTZmZGxpYWd1ZnJn"
-            ><i class="fa-brands fa-tiktok"></i
-          ></a>
-          <a href="https://github.com/mariannelouiseee"
-            ><i class="fa-brands fa-github"></i
-          ></a>
+    <div class="container">
+      <!-- NAVBAR -->
+      <header class="navbar">
+        <a href="#home" class="logo-container" aria-label="Back to top">
+          <img src="img/logo.png" alt="ML logo" class="logo" />
+          <h3><span>M</span>arianne <span>L</span>ouise</h3>
+        </a>
+        <button
+          class="nav-toggle"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="nav-links"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <ul id="nav-links">
+          <li><a href="#home" class="active">HOME</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#education-timeline">EDUCATION</a></li>
+          <li><a href="#experience">EXPERIENCE</a></li>
+          <li><a href="#projects">PROJECTS</a></li>
+          <li><a href="#skills">SKILLS</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </header>
+
+      <!-- HERO -->
+      <section id="home">
+        <div class="hero">
+          <div class="info">
+            <span class="hero-badge reveal" style="--d: 0s">
+              <span class="pulse-dot"></span> QA Engineer · Dory PH Inc
+            </span>
+            <h3 class="reveal" style="--d: 0.1s">
+              Hello! I'm <span>M</span>arianne.
+            </h3>
+            <h1 class="reveal" style="--d: 0.2s">
+              <span class="word"><span>W</span>EB</span>
+              <span class="word"><span>D</span>EVELOPER</span>
+            </h1>
+            <p class="typing reveal" style="--d: 0.3s">
+              I’m a <span id="typed"></span
+              ><span class="caret"></span>
+            </p>
+            <h4 class="reveal" style="--d: 0.4s">
+              <i
+                ><strong
+                  >BSIT graduate of Isabela State University - Roxas</strong
+                ></i
+              >
+            </h4>
+
+            <div class="cta reveal" style="--d: 0.5s">
+              <a href="#contact" class="btn btn-primary">
+                Let's Talk <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="#about" class="btn btn-ghost">About Me</a>
+            </div>
+
+            <div class="buttons reveal" style="--d: 0.6s">
+              <p>Contact Me</p>
+              <a
+                href="https://www.facebook.com/share/1968xvtyRQ/"
+                aria-label="Facebook"
+                target="_blank"
+                rel="noopener"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a
+                href="https://www.tiktok.com/@guiamedrano_?_t=ZS-8xmwvWttTRI&_r=1"
+                aria-label="TikTok"
+                target="_blank"
+                rel="noopener"
+                ><i class="fa-brands fa-tiktok"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/guiamedrano_?igsh=ZTZmZGxpYWd1ZnJn"
+                aria-label="Instagram"
+                target="_blank"
+                rel="noopener"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a
+                href="https://github.com/mariannelouiseee"
+                aria-label="GitHub"
+                target="_blank"
+                rel="noopener"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="image">
+            <div class="photo-wrap tilt">
+              <div class="photo-ring"></div>
+              <img
+                src="img/mypic-web.jpg"
+                class="mypic"
+                alt="Marianne Louise Medrano"
+              />
+              <span class="float-chip chip-1"
+                ><img src="img/Skills/react.svg" alt="" />React</span
+              >
+              <span class="float-chip chip-2"
+                ><img src="img/Skills/playwright.svg" alt="" />Playwright</span
+              >
+              <span class="float-chip chip-3"
+                ><img src="img/Skills/nodejs.svg" alt="" />Node.js</span
+              >
+              <span class="float-chip chip-4"
+                ><img src="img/Skills/kotlin.svg" alt="" />Kotlin</span
+              >
+            </div>
+          </div>
         </div>
-      </div>
-      <div id="about">
+        <a href="#about" class="scroll-down" aria-label="Scroll to About">
+          <span class="mouse"><span class="wheel"></span></span>
+        </a>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about">
         <div class="about_page">
-          <div class="details">
+          <div class="section-head reveal">
+            <span class="eyebrow">01 — Who I am</span>
+            <h2>ABOUT ME</h2>
+          </div>
+          <div class="details glass reveal" style="--d: 0.1s">
             <div class="about_image">
-              <img src="img/about_pic.JPG" alt="About Me Picture" />
+              <div class="about-photo tilt">
+                <img src="img/about_pic-web.jpg" alt="About Me Picture" />
+              </div>
             </div>
             <div class="about_info">
-              <h1>ABOUT ME</h1>
               <p>
-                Hi! I’m Marianne Louise V. Medrano, a fresh graduate from
-                Isabela State University – Roxas Campus, majoring in Web and
-                Mobile Application Development. I have background knowledge in
-                HTML, CSS, PHP, and Python. Although I sometimes struggle with
-                creating fully responsive websites, I’m actively working to
-                improve and expand my skills through consistent practice and
+                Hi! I’m Marianne Louise V. Medrano, a graduate of Isabela
+                State University – Roxas Campus with a degree in Information
+                Technology, majoring in Web and Mobile Application Development.
+                I currently work as a QA Engineer at Dory PH Inc, where I also
+                handle Tech Support. My journey with the company started as a
+                Graphic Artist on-the-job trainee, and I was later hired as a
+                Graphic Artist before moving into QA. This mix of design,
+                testing and support has given me an eye for detail and a
+                user-first mindset. I have hands-on experience with Playwright
+                for automated testing, plus background knowledge in HTML, CSS,
+                JavaScript, React, Node.js, PHP, Python, and Kotlin. I keep
+                improving my development skills, including building fully
+                responsive websites, through consistent practice and
                 self-learning. I come from a family of six and am the third
                 child, which has taught me how to be both independent and
                 cooperative. My experiences have shaped me into someone who is
                 patient, responsible, and always eager to grow. I’m passionate
-                about technology and excited to start my journey as a
-                developer—learning from others, contributing to real-world
+                about technology and excited to keep growing as a
+                professional—learning from others, contributing to real-world
                 projects, and continuously challenging myself along the way.
               </p>
+              <ul class="traits">
+                <li><i class="fa-solid fa-graduation-cap"></i> BSIT Graduate</li>
+                <li><i class="fa-solid fa-bug"></i> QA Engineer</li>
+                <li><i class="fa-solid fa-headset"></i> Tech Support</li>
+                <li><i class="fa-solid fa-pen-nib"></i> Graphic Artist</li>
+                <li><i class="fa-solid fa-seedling"></i> Always Learning</li>
+                <li><i class="fa-solid fa-people-group"></i> Team Player</li>
+              </ul>
             </div>
           </div>
         </div>
-        <div id="education-timeline">
-          <h1>EDUCATIONAL BACKGROUND</h1>
-          <div class="timeline-items">
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-date">2025</div>
-              <div class="timeline-content">
-                <div class="school-header">
-                  <img
-                    src="img/School/ISU.png"
-                    alt="ISU Logo"
-                    class="school-logo"
-                  />
-                  <h3>Tertiary</h3>
-                </div>
-                <p>Bachelor of Science in Information Technology</p>
-                <p>Isabela State University – Roxas Campus</p>
-                <p><em>Rang-ayan, Roxas, Isabela</em></p>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-date">2021</div>
-              <div class="timeline-content">
-                <div class="school-header">
-                  <img
-                    src="img/School/ASHS.png"
-                    alt="ASHS Logo"
-                    class="school-logo"
-                  />
-                  <h3>Secondary (Senior)</h3>
-                </div>
-                <p>Accountancy, Business, and Management</p>
-                <p>Aurora Senior High School</p>
-                <p><em>Ballesteros, Aurora, Isabela</em></p>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-date">2019</div>
-              <div class="timeline-content">
-                <div class="school-header">
-                  <img
-                    src="img/School/SNHS.png"
-                    alt="SNHS Logo"
-                    class="school-logo"
-                  />
-                  <h3>Secondary (Junior)</h3>
-                </div>
-                <p>Sandiat National High School</p>
-                <p><em>Sandiat East, San Manuel, Isabela</em></p>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-date">2015</div>
-              <div class="timeline-content">
-                <div class="school-header">
-                  <img
-                    src="img/School/VES.png"
-                    alt="VES Logo"
-                    class="school-logo"
-                  />
-                  <h3>Primary</h3>
-                </div>
-                <p>Villanueva Elementary School</p>
-                <p><em>Villanueva, San Manuel, Isabela</em></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="skills">
-        <div class="myskills">
-          <h1>SKILLS</h1>
-          <div class="skills-section"></div>
-          <div class="frontend-skills">
-            <h3>Frontend</h3>
-            <div class="skills-item">
-              <div class="skill">
-                <img src="./img/Skills/html.png" alt="html" />
-              </div>
-              <div class="skill">
-                <img src="./img/Skills/css.png" alt="css" />
-              </div>
-              <div class="skill">
-                <img src="./img/Skills/js.png" alt="javascript" />
-              </div>
-              <div class="skill">
-                <img src="./img/Skills/bootstrap.png" alt="bootstrap" />
-              </div>
-            </div>
-          </div>
-          <div class="backend-skills">
-            <h3>Backend</h3>
-            <div class="skills-item">
-              <div class="skill">
-                <img src="./img/Skills/python.png" alt="python" />
-              </div>
-              <div class="skill">
-                <img src="./img/Skills/php.png" alt="php" />
-              </div>
-              <div class="skill">
-                <img src="./img/Skills/mysql.png" alt="mysql" />
-              </div>
-              <div class="skill">
-                <img src="./img/Skills/laravel.png" alt="laravel" />
-              </div>
-            </div>
-          </div>
-          <div class="other-skills">
-            <h3>Other Skills</h3>
-            <div class="skills-item">
-              <div class="skill">
-                <img src="./img/Skills/photoshop.png" alt="photoshop" />
-              </div>
-              <div class="skill">
-                <img src="./img/Skills/canva.png" alt="canva" />
-              </div>
-              <div class="skill">
-                <img src="./img/Skills/git.png" alt="git" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      </section>
 
-      <div id="contact">
-        <div class="form">
-          <h1>MESSAGE ME</h1>
+      <!-- WHAT I DO -->
+      <section id="services">
+        <div class="section-head reveal">
+          <span class="eyebrow">02 — What I do</span>
+          <h2>WHAT I OFFER</h2>
+        </div>
+        <div class="services-grid">
+          <article class="service-card glass spotlight reveal" style="--d: 0s">
+            <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
+            <h3>Web &amp; Mobile Development</h3>
+            <p>
+              Building clean, responsive pages and interfaces with HTML, CSS,
+              JavaScript, React and Bootstrap, plus mobile apps with Kotlin.
+            </p>
+          </article>
+          <article class="service-card glass spotlight reveal" style="--d: 0.1s">
+            <div class="service-icon"><i class="fa-solid fa-database"></i></div>
+            <h3>Backend &amp; Databases</h3>
+            <p>
+              Creating dynamic features and data-driven apps with PHP, Python,
+              Node.js, Laravel and MySQL.
+            </p>
+          </article>
+          <article class="service-card glass spotlight reveal" style="--d: 0.2s">
+            <div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+            <h3>Graphic Design</h3>
+            <p>
+              Designing visuals, layouts and graphics with Photoshop and
+              Canva, backed by real experience as a Graphic Artist.
+            </p>
+          </article>
+          <article class="service-card glass spotlight reveal" style="--d: 0.3s">
+            <div class="service-icon"><i class="fa-solid fa-bug"></i></div>
+            <h3>QA &amp; Tech Support</h3>
+            <p>
+              Testing software (including automation with Playwright), ensuring quality, and helping users
+              solve technical issues.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- EDUCATION -->
+      <section id="education-timeline">
+        <div class="section-head reveal">
+          <span class="eyebrow">03 — My journey</span>
+          <h2>EDUCATIONAL BACKGROUND</h2>
+        </div>
+        <div class="timeline-items">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2025</div>
+            <div class="timeline-content glass spotlight">
+              <div class="school-header">
+                <img
+                  src="img/School/ISU.png"
+                  alt="ISU Logo"
+                  class="school-logo"
+                />
+                <h3>Tertiary</h3>
+              </div>
+              <p>Bachelor of Science in Information Technology</p>
+              <p>Isabela State University – Roxas Campus</p>
+              <p><em>Rang-ayan, Roxas, Isabela</em></p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2021</div>
+            <div class="timeline-content glass spotlight">
+              <div class="school-header">
+                <img
+                  src="img/School/ASHS.png"
+                  alt="ASHS Logo"
+                  class="school-logo"
+                />
+                <h3>Secondary (Senior)</h3>
+              </div>
+              <p>Accountancy, Business, and Management</p>
+              <p>Aurora Senior High School</p>
+              <p><em>Ballesteros, Aurora, Isabela</em></p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2019</div>
+            <div class="timeline-content glass spotlight">
+              <div class="school-header">
+                <img
+                  src="img/School/SNHS.png"
+                  alt="SNHS Logo"
+                  class="school-logo"
+                />
+                <h3>Secondary (Junior)</h3>
+              </div>
+              <p>Sandiat National High School</p>
+              <p><em>Sandiat East, San Manuel, Isabela</em></p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2015</div>
+            <div class="timeline-content glass spotlight">
+              <div class="school-header">
+                <img
+                  src="img/School/VES.png"
+                  alt="VES Logo"
+                  class="school-logo"
+                />
+                <h3>Primary</h3>
+              </div>
+              <p>Villanueva Elementary School</p>
+              <p><em>Villanueva, San Manuel, Isabela</em></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE (newest first)
+           To add a role, copy one <article class="exp-card ..."> block.
+           Add class "current" to the period badge for a role you still hold. -->
+      <section id="experience">
+        <div class="section-head reveal">
+          <span class="eyebrow">04 — My experience</span>
+          <h2>WORK EXPERIENCE</h2>
+        </div>
+        <div class="exp-list">
+          <article class="exp-card glass spotlight reveal">
+            <div class="exp-icon"><i class="fa-solid fa-bug"></i></div>
+            <div class="exp-body">
+              <div class="exp-top">
+                <h3>QA Engineer</h3>
+                <span class="exp-period current">Jan 2026 — Present</span>
+              </div>
+              <p class="exp-company">
+                <i class="fa-solid fa-building"></i> Dory PH Inc
+              </p>
+              <p class="exp-extra">
+                <i class="fa-solid fa-headset"></i>
+                Additional role: <strong>Tech Support</strong>
+                <span>Oct 2026 — Present</span>
+              </p>
+              <ul>
+                <li>Test software to find, document and report bugs before release.</li>
+                <li>Write automated end-to-end tests using Playwright.</li>
+                <li>Help make sure products meet quality standards and work as expected.</li>
+                <li>Provide technical support by assisting with and resolving technical issues.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="exp-card glass spotlight reveal" style="--d: 0.12s">
+            <div class="exp-icon"><i class="fa-solid fa-pen-nib"></i></div>
+            <div class="exp-body">
+              <div class="exp-top">
+                <h3>Graphic Artist</h3>
+                <span class="exp-period">Oct 2025 — Dec 2025</span>
+              </div>
+              <p class="exp-company">
+                <i class="fa-solid fa-building"></i> Dory PH Inc
+              </p>
+              <ul>
+                <li>Hired after my OJT to continue as part of the team.</li>
+                <li>Created graphics and visual materials using design tools such as Photoshop and Canva.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="exp-card glass spotlight reveal" style="--d: 0.24s">
+            <div class="exp-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="exp-body">
+              <div class="exp-top">
+                <h3>Graphic Artist <span class="exp-tag">OJT</span></h3>
+                <span class="exp-period">Feb 2025 — May 2025</span>
+              </div>
+              <p class="exp-company">
+                <i class="fa-solid fa-building"></i> Dory PH Inc
+              </p>
+              <ul>
+                <li>Completed my on-the-job training as a Graphic Artist.</li>
+                <li>Gained hands-on experience designing visuals in a real work environment.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- PROJECTS
+           EDIT ME: replace the placeholder projects with your own.
+           - data-category must be one of: web, mobile, design
+           - To use a screenshot, replace the icon inside .project-thumb with
+             <img src="img/Projects/your-image.png" alt="Project name" />
+           - Point the "Code" link to the project's GitHub repository and
+             add a "Live Demo" link if you have one. -->
+      <section id="projects">
+        <div class="section-head reveal">
+          <span class="eyebrow">05 — My work</span>
+          <h2>PROJECTS</h2>
+        </div>
+
+        <div class="project-filters reveal" role="tablist" aria-label="Filter projects">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="web">Web</button>
+          <button class="filter" data-filter="mobile">Mobile</button>
+          <button class="filter" data-filter="design">Design</button>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card glass spotlight reveal" data-category="web" style="--d: 0s">
+            <div class="project-thumb">
+              <i class="fa-solid fa-laptop-code"></i>
+              <span class="project-cat">Web</span>
+            </div>
+            <div class="project-body">
+              <h3>Your Web Project</h3>
+              <p>
+                A short description of what this project does, who it is for
+                and what problem it solves.
+              </p>
+              <ul class="tags">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/mariannelouiseee" target="_blank" rel="noopener">
+                  <i class="fa-brands fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass spotlight reveal" data-category="web" style="--d: 0.1s">
+            <div class="project-thumb">
+              <i class="fa-solid fa-database"></i>
+              <span class="project-cat">Web</span>
+            </div>
+            <div class="project-body">
+              <h3>Your PHP &amp; MySQL System</h3>
+              <p>
+                Describe a system or app you built, such as a school or
+                capstone project, and the features it includes.
+              </p>
+              <ul class="tags">
+                <li>PHP</li>
+                <li>MySQL</li>
+                <li>Bootstrap</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/mariannelouiseee" target="_blank" rel="noopener">
+                  <i class="fa-brands fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass spotlight reveal" data-category="mobile" style="--d: 0.2s">
+            <div class="project-thumb">
+              <i class="fa-solid fa-mobile-screen-button"></i>
+              <span class="project-cat">Mobile</span>
+            </div>
+            <div class="project-body">
+              <h3>Your Mobile App</h3>
+              <p>
+                Explain the idea behind the app, what it does and what you
+                learned while building it.
+              </p>
+              <ul class="tags">
+                <li>Mobile</li>
+                <li>UI/UX</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/mariannelouiseee" target="_blank" rel="noopener">
+                  <i class="fa-brands fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass spotlight reveal" data-category="design" style="--d: 0.3s">
+            <div class="project-thumb">
+              <i class="fa-solid fa-palette"></i>
+              <span class="project-cat">Design</span>
+            </div>
+            <div class="project-body">
+              <h3>Your Design Work</h3>
+              <p>
+                Posters, logos, layouts or mock-ups you made in Photoshop or
+                Canva can go here.
+              </p>
+              <ul class="tags">
+                <li>Photoshop</li>
+                <li>Canva</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="projects-more reveal">
+          <a
+            href="https://github.com/mariannelouiseee"
+            class="btn btn-ghost"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fa-brands fa-github"></i> See more on GitHub
+          </a>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills">
+        <div class="myskills">
+          <div class="section-head reveal">
+            <span class="eyebrow">06 — What I use</span>
+            <h2>SKILLS</h2>
+          </div>
+
+          <div class="skills-grid">
+            <div class="skill-group glass reveal" style="--d: 0s">
+              <h3><i class="fa-solid fa-palette"></i> Frontend</h3>
+              <div class="skills-item">
+                <div class="skill spotlight">
+                  <img src="./img/Skills/html.png" alt="html" /><span>HTML</span>
+                </div>
+                <div class="skill spotlight">
+                  <img src="./img/Skills/css.png" alt="css" /><span>CSS</span>
+                </div>
+                <div class="skill spotlight">
+                  <img src="./img/Skills/js.png" alt="javascript" /><span
+                    >JavaScript</span
+                  >
+                </div>
+                <div class="skill spotlight">
+                  <img src="./img/Skills/react.svg" alt="react" /><span
+                    >React</span
+                  >
+                </div>
+                <div class="skill spotlight">
+                  <img src="./img/Skills/bootstrap.png" alt="bootstrap" /><span
+                    >Bootstrap</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-group glass reveal" style="--d: 0.12s">
+              <h3><i class="fa-solid fa-server"></i> Backend</h3>
+              <div class="skills-item">
+                <div class="skill spotlight">
+                  <img src="./img/Skills/python.png" alt="python" /><span
+                    >Python</span
+                  >
+                </div>
+                <div class="skill spotlight">
+                  <img src="./img/Skills/php.png" alt="php" /><span>PHP</span>
+                </div>
+                <div class="skill spotlight">
+                  <img src="./img/Skills/nodejs.svg" alt="node.js" /><span
+                    >Node.js</span
+                  >
+                </div>
+                <div class="skill spotlight">
+                  <img src="./img/Skills/mysql.png" alt="mysql" /><span
+                    >MySQL</span
+                  >
+                </div>
+                <div class="skill spotlight">
+                  <img src="./img/Skills/laravel.png" alt="laravel" /><span
+                    >Laravel</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-group glass reveal" style="--d: 0.24s">
+              <h3><i class="fa-solid fa-bug"></i> QA &amp; Support</h3>
+              <div class="skills-item">
+                <div class="skill spotlight">
+                  <img src="./img/Skills/playwright.svg" alt="playwright" /><span
+                    >Playwright</span
+                  >
+                </div>
+                <div class="skill spotlight">
+                  <span class="skill-icon"><i class="fa-solid fa-vial-circle-check"></i></span><span>Manual Testing</span>
+                </div>
+                <div class="skill spotlight">
+                  <span class="skill-icon"><i class="fa-solid fa-list-check"></i></span><span>Test Cases</span>
+                </div>
+                <div class="skill spotlight">
+                  <span class="skill-icon"><i class="fa-solid fa-bug-slash"></i></span><span>Bug Reporting</span>
+                </div>
+                <div class="skill spotlight">
+                  <span class="skill-icon"><i class="fa-solid fa-headset"></i></span><span>Tech Support</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-group glass reveal" style="--d: 0.36s">
+              <h3><i class="fa-solid fa-wand-magic-sparkles"></i> Mobile, Design &amp; Tools</h3>
+              <div class="skills-item">
+                <div class="skill spotlight">
+                  <img src="./img/Skills/kotlin.svg" alt="kotlin" /><span
+                    >Kotlin</span
+                  >
+                </div>
+                <div class="skill spotlight">
+                  <img src="./img/Skills/photoshop.png" alt="photoshop" /><span
+                    >Photoshop</span
+                  >
+                </div>
+                <div class="skill spotlight">
+                  <img src="./img/Skills/canva.png" alt="canva" /><span
+                    >Canva</span
+                  >
+                </div>
+                <div class="skill spotlight">
+                  <img src="./img/Skills/git.png" alt="git" /><span>Git</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CERTIFICATIONS & ACHIEVEMENTS
+           EDIT ME: replace with your real certificates, awards or trainings. -->
+      <section id="certifications">
+        <div class="section-head reveal">
+          <span class="eyebrow">07 — Recognition</span>
+          <h2>CERTIFICATES &amp; ACHIEVEMENTS</h2>
+        </div>
+        <div class="certs-grid">
+          <article class="cert-card glass spotlight reveal" style="--d: 0s">
+            <div class="cert-icon"><i class="fa-solid fa-certificate"></i></div>
+            <h3>Certificate Title</h3>
+            <p>Issuing Organization</p>
+            <span class="cert-year">Year</span>
+          </article>
+          <article class="cert-card glass spotlight reveal" style="--d: 0.1s">
+            <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
+            <h3>Award / Achievement</h3>
+            <p>Awarding Body</p>
+            <span class="cert-year">Year</span>
+          </article>
+          <article class="cert-card glass spotlight reveal" style="--d: 0.2s">
+            <div class="cert-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+            <h3>Training / Seminar</h3>
+            <p>Organizer</p>
+            <span class="cert-year">Year</span>
+          </article>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <div class="section-head reveal">
+          <span class="eyebrow">08 — Say hello</span>
+          <h2>MESSAGE ME</h2>
+        </div>
+        <div class="form glass reveal" style="--d: 0.1s">
           <p>Your message will be sent directly to my Gmail inbox.</p>
           <form action="https://api.web3forms.com/submit" method="POST">
             <input
@@ -221,70 +674,66 @@
               value="2c6f8bf7-7454-47a4-afa6-aaf1abe507c7"
             />
 
-            <input type="text" name="name" placeholder="Name" required /><br />
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              required
-            /><br />
-            <input
-              type="text"
-              name="subject"
-              placeholder="Subject"
-              required
-            /><br />
-            <textarea name="message" placeholder="Message" required></textarea
-            ><br />
+            <div class="field">
+              <input type="text" name="name" id="f-name" placeholder=" " required />
+              <label for="f-name">Name</label>
+            </div>
+            <div class="field">
+              <input type="email" name="email" id="f-email" placeholder=" " required />
+              <label for="f-email">Email</label>
+            </div>
+            <div class="field">
+              <input type="text" name="subject" id="f-subject" placeholder=" " required />
+              <label for="f-subject">Subject</label>
+            </div>
+            <div class="field">
+              <textarea name="message" id="f-message" placeholder=" " required></textarea>
+              <label for="f-message">Message</label>
+            </div>
 
-            <button type="submit">Submit</button>
+            <button type="submit">
+              <span class="btn-label">Submit</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+            <p class="form-status" role="status" aria-live="polite"></p>
           </form>
         </div>
-      </div>
+      </section>
 
       <footer class="footer">
         <div class="footer-content">
-          <!-- <div class="footer-links">
-            <a href="#">LinkedIn</a>
-            <a href="#">GitHub</a>
-            <a href="#">Email</a>
-          </div> -->
-          <p class="footer-copy">&copy; 2025 All rights reserved.</p>
+          <div class="footer-social">
+            <a
+              href="https://github.com/mariannelouiseee"
+              aria-label="GitHub"
+              target="_blank"
+              rel="noopener"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/share/1968xvtyRQ/"
+              aria-label="Facebook"
+              target="_blank"
+              rel="noopener"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/guiamedrano_?igsh=ZTZmZGxpYWd1ZnJn"
+              aria-label="Instagram"
+              target="_blank"
+              rel="noopener"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </div>
+          <p class="footer-copy">&copy; 2026 Marianne Louise V. Medrano. All rights reserved.</p>
         </div>
       </footer>
     </div>
 
-    <script>
-      const elements = document.querySelectorAll(
-        ".info, .buttons, .image .mypic, .about_page, .timeline-item, .skill, .form"
-      );
+    <a href="#home" class="to-top" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </a>
 
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("animate");
-            } else {
-              entry.target.classList.remove("animate");
-            }
-          });
-        },
-        {
-          threshold: 0.3,
-        }
-      );
-
-      elements.forEach((el, index) => {
-        if (el.classList.contains("timeline-item")) {
-          if (index % 2 === 0) {
-            el.classList.add("right-in");
-          } else {
-            el.classList.add("left-in");
-          }
-        }
-
-        observer.observe(el);
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
